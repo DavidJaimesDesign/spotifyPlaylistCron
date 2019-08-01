@@ -1,6 +1,7 @@
 # SpotifyPlaylistCron
 I have been manually saving Spotify's discover weekly into their own seperate playlists for a while now. I got tired of that,
 so I created this script that does that for me. I have it setup on a raspberrry pi and runs as a cron job. Setup information is bellow.
+c. Python 3 only
 
 ## Dependcies
 You must pip install 'spotipy' to use this script http://spotipy.readthedocs.io/en/latest/
@@ -24,3 +25,12 @@ export SPOTIFY_USERNAME=$YOUR_SPOTIFY_USERNAME
 4. Go through the flow and enter your credentials this will rederict you to a localhost address
 5. Copy that address and paste it into your terminal
 6. Your application shown be authorized now
+
+## Server support
+Now with server support be sure to install the required values
+```
+pip install flask flask-jsonpify flask-sqlalchemy flask-restful
+```
+Then run the application with python server.py
+
+I have my server running in the background on a raspberry pi that runs a cron job that curls the create playlist every monday
